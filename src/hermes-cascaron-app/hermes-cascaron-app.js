@@ -62,6 +62,13 @@ class HermesCascaronApp extends PolymerElement {
         color: black;
         font-weight: bold;
       }
+
+      app-toolbar {
+        background: blue;
+        color: white;
+      }
+
+
       </style>
       <app-location route="{{route}}" url-space-regex="^[[rootPath]]">
       </app-location>

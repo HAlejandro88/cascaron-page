@@ -2,13 +2,17 @@
   "entrypoint": "index.html",
   "shell": "src/hermes-cascaron-app/hermes-cascaron-app.js",
   "sources": [
-    "images/**/*"
+    "src/hermes-cascaron-app/hermes-cascaron-app.js",
+    "images/**/*",
+    "manifest/**",
+    "package.json"
   ],
   "extraDependencies": [
     "manifest.json",
     "node_modules/@webcomponents/webcomponentsjs/*.js",
     "!node_modules/@webcomponents/webcomponentsjs/gulpfile.js",
-    "node_modules/@webcomponents/webcomponentsjs/bundles/*.js"
+    "node_modules/@webcomponents/webcomponentsjs/bundles/*.js",
+    "node_modules/@webcomponents/webcomponentsjs/bundles/**"
   ],
   "builds": [
     {
@@ -62,7 +66,9 @@
       },
       "bundle": true,
       "addServiceWorker": true
-    }
+    },
+    { "preset": "es6-unbundled" },
+    { "preset": "uncompiled-unbundled" }
   ],
   "moduleResolution": "node",
   "npm": true,
