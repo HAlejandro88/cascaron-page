@@ -157,7 +157,7 @@ class HermesCascaronApp extends PolymerElement {
           import('../my-contact/my-contact.js');
           break;
         case 'view404':
-          import('./my-view404.js');
+          import('../my-view404/my-view404.js');
           break;
       }
     }
